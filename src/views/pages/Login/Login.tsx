@@ -1,5 +1,5 @@
 import { AccountCircle, GitHub, Google } from "@mui/icons-material";
-import { Alert, Button, Typography } from "@mui/material";
+import { Alert, Box, Button, Typography } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { PageContainer } from "../../../components/PageContainer";
@@ -48,12 +48,12 @@ export const Login: React.FC = () => {
 
   return (
     <PageContainer>
-      <div className={styles.container}>
-        <div className={styles.login}>
-          {message ? <Alert onClose={onCloseMessageClick} severity="success">Conta logada!</Alert> : <div></div>}
-          <div className={styles.iconAccount}>
+      <Box className={styles.container}>
+        <Box className={styles.login}>
+          {message ? <Alert onClose={onCloseMessageClick} severity="success">Conta logada!</Alert> : <Box></Box>}
+          <Box className={styles.iconAccount}>
             <AccountCircle sx={{ color: "#89D963", fontSize: "7rem" }}/>
-          </div>
+          </Box>
           <TextField
             value={email}
             label={"Email"}
@@ -70,7 +70,7 @@ export const Login: React.FC = () => {
             variant={"outlined"}
             required={true}
           />
-          <div className={styles.button}>
+          <Box className={styles.button}>
             <Button
               variant="contained"
               size="large"
@@ -80,16 +80,16 @@ export const Login: React.FC = () => {
             >
               Login
             </Button>
-          </div>
-          <div className={styles.linkRegister}>
+          </Box>
+          <Box className={styles.linkRegister}>
             <Typography onClick={onRegisterButtonClick}>Não tem conta? Registra-se</Typography>
-          </div>
-          <div className={styles.socialNetworks}>
+          </Box>
+          <Box className={styles.socialNetworks}>
             <Google onClick={onGoogleButtonClick} sx={{ color: "#89D963", fontSize: "2.5rem" }}/>
             <GitHub onClick={onGithubButtonClick} sx={{ color: "#89D963", fontSize: "2.5rem" }}/>
-          </div>
-        </div>
-      </div>
+          </Box>
+        </Box>
+      </Box>
     </PageContainer>
   );
 };
