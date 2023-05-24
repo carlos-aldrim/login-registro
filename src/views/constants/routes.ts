@@ -1,4 +1,4 @@
 export enum PagesRoutes {
-  login = "/login",
+  login = "/",
   register = "/register"
 };

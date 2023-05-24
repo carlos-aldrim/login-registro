@@ -42,7 +42,7 @@ export const Register: React.FC = () => {
   };
 
   const onLoginButtonClick = () => {
-    navigate("/login");
+    navigate("/");
   };
 
   const onRegisterButtonClick = () => {
