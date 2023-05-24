@@ -8,7 +8,7 @@ export const useStyles = makeStyles({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    backgroundImage: "url(http://localhost:3000/static/media/BlackWallBackground.d587a693c53c03332332.jpg)",
+    backgroundImage: "radial-gradient(circle 993px at .5% 50.5%,#b1d99e 0,#c4c4c4 100.2%)",
   },
   register: {
     width: "40%",
